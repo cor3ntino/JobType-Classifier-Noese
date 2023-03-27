@@ -1,0 +1,15 @@
+# VSCodium
+__pycache__/
+
+# Environment
+env/
+activate
+
+# Data
+*checkpoints/
+*logs/
+1st_version.tsv
+
+# Code
+manual_check.py
+tests.py
