@@ -1,3 +1,3 @@
 from .encoder import Encoder
-from .classifier import CustomClassifier
+from .classifier_all import run_training, CustomClassifier
 from .classes import *
