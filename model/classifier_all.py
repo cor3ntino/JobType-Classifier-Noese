@@ -29,12 +29,12 @@ from .classes import (
 from .utils import split_train_val
 
 DEVICE = torch.device("cpu")
-NUM_EPOCHS = 30
+NUM_EPOCHS = 100
 BATCH_SIZE = 32
-LEARNING_RATE = 2e-5
+LEARNING_RATE = 1e-4
 
 LOG_INTERVAL = 500
-TOP_K_CHECKPOINTS = 5
+TOP_K_CHECKPOINTS = 100
 
 MODEL_NAME = "JobTypeClassifier"
 LOGGER_DIR = "model/classifier_logs/"
@@ -233,6 +233,7 @@ class TrainableCustomClassifier(pl.LightningModule):
             num_warmup_steps=0,
             num_training_steps=total_steps
         )
+
         return {"optimizer": optimizer, "lr_scheduler": scheduler}
 
     def forward(self, x1, x2):
